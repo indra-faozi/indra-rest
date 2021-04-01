@@ -1,1 +1,1 @@
-Belajar mengenai JSON menggunakan JQuery
+Belajar mengelola mengenai JSON (Public API) menggunakan JQuery
