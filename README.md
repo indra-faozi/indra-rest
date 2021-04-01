@@ -1,1 +1,1 @@
-Belajar mengenain JSON menggunakan JQuery
+Belajar mengenai JSON menggunakan JQuery
