@@ -48,7 +48,7 @@
                         origin: $('#origin').val(),
                         destination: $('#destination').val(),
                         weight: $('#weight').val(),
-                        courier: 'jne'
+                        courier: $('#courier').val()
                     },
                     success: function(data){
                         var origin = data.rajaongkir.origin_details
@@ -90,7 +90,7 @@
     <div class="container">
         <p class="h1">Cek Ongkir</p>
         <div class="row">
-            <div class="col-md-4 mt-5">
+            <div class="col mt-5">
                 <div class="form-group">
                     <label for="">Asal</label>
                     <select class="form-control" id="origin">
@@ -99,7 +99,7 @@
                 </div>
             </div>
             
-            <div class="col-md-4 mt-5">
+            <div class="col mt-5">
                 <div class="form-group">
                     <label for="">Tujuan</label>
                     <select class="form-control" id="destination">
@@ -108,10 +108,22 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mt-5">
+            <div class="col mt-5">
                 <div class="form-group">
                     <label for="">Berat(g)</label>
                     <input type="number" id="weight" min="1" value="1000" class="form-control">
+                </div>
+            </div>
+
+            <div class="col mt-5">
+                <div class="form-group">
+                    <label for="">Ekspedisi</label>
+                    <select id="courier" class="form-control">
+                        <option value="">-- PILIH --</option>
+                        <option value="jne">JNE</option>
+                        <option value="pos">POS INDONESIA</option>
+                        <option value="tiki">TIKI</option>
+                    </select>
                 </div>
             </div>
         </div>
