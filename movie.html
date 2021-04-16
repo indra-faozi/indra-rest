@@ -7,8 +7,20 @@
     <title>XXI</title>
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<style>
+    .backTop{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        color: white;
+        margin: 3rem 2rem;
+        padding: 6px 20px;
+        display: none;
+        cursor: pointer;
+    }
+</style>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">XXI</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -24,7 +36,7 @@
     </nav>
 
     <div class="container">
-        <div class="row justify-content-center mt-4">
+        <div class="row justify-content-center mt-4 ">
             <div class="col">
                 <h2 class="text-center">Search Movie</h2>
                 <form method="post">
@@ -62,6 +74,8 @@
             </div>
         </div>
     </div>
+
+    <button class="backTop rounded btn btn-primary">Back Top</button>
     
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -150,6 +164,19 @@
                     }
                 });
             });
+
+            var backTop = $('.backTop')
+            $(window).on('scroll', function(){
+                if ($(this).scrollTop() > 100) {
+                    backTop.fadeIn()
+                }else{
+                    backTop.fadeOut()
+                }
+            })
+
+            backTop.on('click', function(){
+                $('html').animate({scrollTop: 0}, 500)
+            })
         });
     </script>
 </body>
